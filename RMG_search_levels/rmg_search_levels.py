@@ -123,6 +123,7 @@ with open('chem_annotated.inp','r') as f:
 					if product in rmg_e.keys():
 						details[-1]["pf"].append(rmg_e[product])
 
+# lebel (ex,av) means the forward reaction rate is exact matched and the reverse reaction rate is averaged.
 label = ["(ex,ex)", "(ex,av)", "(ex,no)", "(av,av)", "(av,no)"]
 ex_ex = []
 ex_av = []
