@@ -1,6 +1,6 @@
 # This file is used to identify the number of reactions with averaged rate
 # add new comment line
-# git track changes
+# git track changes of files
 import re
 import os
 import matplotlib.pyplot as plt
