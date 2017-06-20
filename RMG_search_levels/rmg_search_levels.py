@@ -166,6 +166,7 @@ plt.show()
 
 ##################################
 print "------------------------- number of reactions with averaged forward reaction rate for each reactants size(sum of reactants CxHyOz) -------------------------\n"
+# Put all of the reactions with averaged forward reation rates into a list av_for
 av_for =[]
 for i in av_no:
 	av_for.append(i)
