@@ -1,0 +1,24 @@
+! Estimated using an average for rate rule  
+(avraged, have no reverse reaction)
+
+
+! Kinetics were estimated in this direction instead of the reverse because:
+! Both directions are estimates, but this direction is exergonic.
+(avraged and averaged)
+
+
+! Kinetics were estimated in this direction instead of the reverse because:
+! This direction matched an entry in intra_H_migration, the other was just an estimate.
+(exact, averaged)
+
+! Kinetics were estimated in this direction instead of the reverse because:
+! Both directions matched explicit rate rules, but this direction is exergonic.
+(exact, exact)
+
+! Exact match found for rate rule [R4H_SSS;C_rad_out_H/NonDeC;O_H_out]
+! Kinetics were estimated in this direction instead of the reverse because:
+! This direction matched an entry in intra_H_migration, the other was just an estimate.
+
+! Estimated using template [R3H_DS;Cd_rad_out_singleH;XH_out] for rate rule [R3H_DS;Cd_rad_out_singleH;O_H_out]
+! Kinetics were estimated in this direction instead of the reverse because:
+! Both directions are estimates, but this direction is exergonic.

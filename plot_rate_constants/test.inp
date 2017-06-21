@@ -1,0 +1,112 @@
+
+! Reaction index: Chemkin #1681; RMG #10371
+! Template reaction: H_Abstraction
+! Flux pairs: C3H6O(53), C2H5CO(54); S(139), MB(1); 
+! Average of [Average of [CO/H/NonDe;C_rad/H/CsS]]
+! Estimated using template [CO/H/NonDe;C_sec_rad] for rate rule [CO/H/Cs;C_rad/H/Cs\H2\CO/Cs]
+! Kinetics were estimated in this direction instead of the reverse because:
+! Both directions are estimates, but this direction is exergonic at 298K.
+! dHrxn(298 K) = -38.90 kJ/mol, dGrxn(298 K) = -37.26 kJ/mol
+C3H6O(53)+S(139)=MB(1)+C2H5CO(54)                   1.940e-04 4.680     6.310    
+
+! Reaction index: Chemkin #1682; RMG #10641
+! Template reaction: Disproportionation
+! Flux pairs: S(139), MB(1); C3H5(58), C3H4(56); 
+! Average of [C_rad/H/NonDeC;Cmethyl_Csrad]
+! Estimated using template [C_rad/H/NonDeC;Cmethyl_Rrad] for rate rule [C_rad/H/NonDeC;Cmethyl_Cdrad]
+! Multiplied by reaction path degeneracy 3
+C3H5(58)+S(139)=MB(1)+C3H4(56)                      6.330e+14 -0.700    0.000    
+
+! Reaction index: Chemkin #1683; RMG #10645
+! Template reaction: Disproportionation
+! Flux pairs: S(139), MB(1); C3H5(57), C3H4(56); 
+! Exact match found for rate rule [C_rad/H/NonDeC;Cdpri_Csrad]
+C3H5(57)+S(139)=MB(1)+C3H4(56)                      4.580e+12 0.000     6.000    
+
+! Reaction index: Chemkin #1684; RMG #10791
+! Template reaction: H_Abstraction
+! Flux pairs: C3H6(55), C3H5(57); S(139), MB(1); 
+! Estimated using template [C/H3/Cd;C_rad/H/NonDeC] for rate rule [C/H3/Cd\H_Cd\H2;C_rad/H/Cs\H2\CO/Cs]
+! Multiplied by reaction path degeneracy 3
+! Kinetics were estimated in this direction instead of the reverse because:
+! Both directions are estimates, but this direction is exergonic at 298K.
+! dHrxn(298 K) = -48.21 kJ/mol, dGrxn(298 K) = -44.54 kJ/mol
+C3H6(55)+S(139)=MB(1)+C3H5(57)                      1.008e-03 4.340     4.700    
+
+! Reaction index: Chemkin #1685; RMG #10866
+! Template reaction: H_Abstraction
+! Flux pairs: C3H5(58), C3H6(55); MB(1), S(139); 
+! Average of [Average of [Average of [Average of [C/H2/Cs\Cs2/O;Cd_Cd\H2_rad/Cs]]] + C/H2/NonDeC;Cd_rad/NonDeC]
+! Estimated using average of templates [C_sec;Cd_Cd\H2_rad/Cs] + [C/H2/NonDeC;Cd_rad/NonDeC] for rate rule [C/H2/NonDeC;Cd_Cd\H2_rad/Cs]
+! Multiplied by reaction path degeneracy 2
+! Kinetics were estimated in this direction instead of the reverse because:
+! Both directions are estimates, but this direction is exergonic at 298K.
+! dHrxn(298 K) = -34.20 kJ/mol, dGrxn(298 K) = -33.65 kJ/mol
+MB(1)+C3H5(58)=C3H6(55)+S(139)                      1.428e-02 4.215     1.605    
+
+! Reaction index: Chemkin #1686; RMG #10934
+! Template reaction: H_Abstraction
+! Flux pairs: C3H5(59), C3H6(55); MB(1), S(139); 
+! Estimated using template [C/H2/NonDeC;Cd_pri_rad] for rate rule [C/H2/NonDeC;Cd_Cd\H\Cs_pri_rad]
+! Multiplied by reaction path degeneracy 2
+! Kinetics were estimated in this direction instead of the reverse because:
+! Both directions are estimates, but this direction is exergonic at 298K.
+! dHrxn(298 K) = -48.84 kJ/mol, dGrxn(298 K) = -49.04 kJ/mol
+MB(1)+C3H5(59)=C3H6(55)+S(139)                      1.020e+03 3.100     8.820    
+
+! Reaction index: Chemkin #1687; RMG #11043
+! Template reaction: Disproportionation
+! Flux pairs: S(139), MB(1); C2H5CO(54), C3H4O(60); 
+! Average of [C_rad/H/NonDeC;C/H2/Nd_Csrad]
+! Estimated using template [C_rad/H/NonDeC;C/H2/Nd_Rrad] for rate rule [C_rad/H/NonDeC;C/H2/Nd_COrad]
+! Multiplied by reaction path degeneracy 2
+C2H5CO(54)+S(139)=MB(1)+C3H4O(60)                   1.026e+14 -0.350    0.000    
+
+! Reaction index: Chemkin #1688; RMG #11122
+! Template reaction: Disproportionation
+! Flux pairs: S(139), MB(1); C3H5(59), H3CCCH(61); 
+! Average of [Average of [Average of [C_methyl;Cds/H2_d_N3rad + Average of [Average of [C_methyl;Cds/H2_d_N5ddrad/O]]]] + Average of [Average of
+! [C_methyl;Cds/H2_d_N3rad + Average of [Average of [C_methyl;Cds/H2_d_N5ddrad/O]]] + Average of [C_methyl;Cds/H2_d_N3rad] + Average of [Average of
+! [Average of [C_methyl;Cds/H2_d_N5ddrad/O]] + Average of [Average of [C_methyl;Cds/H2_d_N5ddrad/O] + Average of [C_methyl;Cds/H2_d_N5ddrad/O]]]]]
+! Estimated using template [Cs_rad;CH_d_Rrad] for rate rule [C_rad/H/NonDeC;Cds/H/NonDe_d_Rrad]
+C3H5(59)+S(139)=MB(1)+H3CCCH(61)                    1.138e+06 1.870     -1.110   
+
+! Reaction index: Chemkin #1689; RMG #11126
+! Template reaction: Disproportionation
+! Flux pairs: S(139), MB(1); C3H5(58), H3CCCH(61); 
+! Average of [Average of [C_methyl;Cds/H2_d_N3rad + Average of [Average of [C_methyl;Cds/H2_d_N5ddrad/O]]] + Average of [C_methyl;Cds/H2_d_N3rad] +
+! Average of [Average of [Average of [C_methyl;Cds/H2_d_N5ddrad/O]] + Average of [Average of [C_methyl;Cds/H2_d_N5ddrad/O] + Average of
+! [C_methyl;Cds/H2_d_N5ddrad/O]]]]
+! Estimated using template [Cs_rad;Cds/H2_d_Rrad] for rate rule [C_rad/H/NonDeC;Cds/H2_d_Crad]
+! Multiplied by reaction path degeneracy 2
+C3H5(58)+S(139)=MB(1)+H3CCCH(61)                    2.277e+06 1.870     -1.110   
+
+! Reaction index: Chemkin #1690; RMG #11288
+! Template reaction: H_Abstraction
+! Flux pairs: H2CCCH(63), H3CCCH(61); MB(1), S(139); 
+! Exact match found for rate rule [C/H2/NonDeC;C_rad/H2/Ct]
+! Multiplied by reaction path degeneracy 2
+! Kinetics were estimated in this direction instead of the reverse because:
+! This direction matched an entry in H_Abstraction, the other was just an estimate.
+! dHrxn(298 K) = 38.33 kJ/mol, dGrxn(298 K) = 36.71 kJ/mol
+MB(1)+H2CCCH(63)=H3CCCH(61)+S(139)                  1.494e-02 4.340     12.800   
+
+! Reaction index: Chemkin #1691; RMG #11304
+! Template reaction: H_Abstraction
+! Flux pairs: H2CCCH(63), C3H4(56); MB(1), S(139); 
+! Exact match found for rate rule [C/H2/NonDeC;Cd_Cdd_rad/H]
+! Multiplied by reaction path degeneracy 2
+! Kinetics were estimated in this direction instead of the reverse because:
+! This direction matched an entry in H_Abstraction, the other was just an estimate.
+! dHrxn(298 K) = 43.82 kJ/mol, dGrxn(298 K) = 43.65 kJ/mol
+MB(1)+H2CCCH(63)=C3H4(56)+S(139)                    3.320e-02 4.340     14.000   
+
+! Reaction index: Chemkin #1692; RMG #11319
+! Template reaction: H_Abstraction
+! Flux pairs: C3H2(64), H2CCCH(63); MB(1), S(139); 
+! Exact match found for rate rule [C/H2/NonDeC;Cd_Cdd_rad/H]
+! Multiplied by reaction path degeneracy 4
+! Kinetics were estimated in this direction instead of the reverse because:
+! This direction matched an entry in H_Abstraction, the other was just an estimate.
+! dHrxn(298 K) = 45.23 kJ/mol, dGrxn(298 K) = 42.11 kJ/mol
+MB(1)+C3H2(64)=H2CCCH(63)+S(139)                    6.640e-02 4.340     14.000   
